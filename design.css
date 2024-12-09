@@ -78,7 +78,7 @@ body {
   position: relative;
   width: 80%;
   max-width: 800px;
-  height: 250px;
+  height: 350px; /* Increased height */
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -89,8 +89,8 @@ body {
 /* Basic styling for each slide */
 .slide {
   position: absolute;
-  width: 230px;
-  height: 230px;
+  width: 300px; /* Increased width */
+  height: 300px; /* Increased height */
   background-size: cover;
   background-position: center;
   border-radius: 50%;
@@ -142,12 +142,12 @@ body {
   /* Make adjustments for smaller screens */
   .slider {
     width: 90%;
-    height: 200px;
+    height: 300px; /* Adjust height for smaller screens */
   }
 
   .slide {
-    width: 150px;
-    height: 150px;
+    width: 230px; /* Adjust width for smaller screens */
+    height: 230px; /* Adjust height for smaller screens */
   }
 
   .caption {
@@ -169,12 +169,12 @@ body {
   /* Adjust for very small screens like phones */
   .slider {
     width: 95%;
-    height: 180px;
+    height: 250px; /* Adjust height for very small screens */
   }
 
   .slide {
-    width: 120px;
-    height: 120px;
+    width: 200px; /* Adjust width for very small screens */
+    height: 200px; /* Adjust height for very small screens */
   }
 
   .caption {
