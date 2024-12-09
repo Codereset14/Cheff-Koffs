@@ -168,21 +168,21 @@ body {
 @media (max-width: 480px) {
   /* Adjust for very small screens like phones */
   .slider {
-    width: 95%;
-    height: 250px; /* Adjust height for very small screens */
+    width: 90%; /* Increase width on small screens */
+    height: 300px; /* Increase height on small screens */
   }
 
   .slide {
-    width: 200px; /* Adjust width for very small screens */
-    height: 200px; /* Adjust height for very small screens */
+    width: 250px; /* Increase width for very small screens */
+    height: 250px; /* Increase height for very small screens */
   }
 
   .caption {
-    font-size: 20px;
+    font-size: 24px; /* Increase caption size */
   }
 
   .spacing {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   #ask {
