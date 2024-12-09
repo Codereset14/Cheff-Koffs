@@ -76,9 +76,9 @@ body {
 /* Slider container */
 .slider {
   position: relative;
-  width: 80%;
+  width: 85%;
   max-width: 800px;
-  height: 350px; /* Increased height */
+  height: 300px; /* Increased height */
   display: flex;
   justify-content: center;
   overflow: hidden;
