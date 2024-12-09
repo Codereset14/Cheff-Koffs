@@ -1,0 +1,242 @@
+/* Reset margin and padding for a consistent layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(83, 83, 85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+/* Top links styling */
+#top_links {
+  text-align: center;
+  z-index: 2;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-30%);
+}
+
+.spacing {
+  margin-right: 30px;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 900;
+  color: rgb(57, 57, 58);
+}
+
+/* Remove extra space on last link */
+#rmv {
+  margin-right: 0;
+}
+
+/* Logo styling */
+#logo {
+  background-image: url(mainlogo.jfif);
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  mix-blend-mode: multiply;
+}
+
+/* Ask section styling */
+#ask {
+  width: 100%;
+  height: 430px;
+  background-image: url(ask.jfif);
+  background-size: cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+  border-radius: 16px;
+}
+
+/* Slider container */
+.slider {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 20px;
+  margin: 0px;
+}
+
+/* Basic styling for each slide */
+.slide {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  transition: all 0.8s ease-in-out;
+  opacity: 0; /* Start hidden */
+  filter: blur(5px);
+  transform: scale(0.8);
+  z-index: 1;
+}
+
+/* Active slide (currently in the middle) */
+.slide.active {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%) scale(1); /* Stay centered */
+}
+
+/* Next slide (coming from the right) */
+.slide.next {
+  transform: translateX(100%) scale(0.9);
+  opacity: 0.8;
+  filter: blur(3px);
+  z-index: 2;
+}
+
+/* Previous slide (coming from the left) */
+.slide.prev {
+  transform: translateX(-100%) scale(0.9);
+  opacity: 0.8;
+  filter: blur(3px);
+  z-index: 2;
+}
+
+/* Caption styling */
+.caption {
+  font-family: "Yuji Mai", serif;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0px;
+  color: #333;
+}
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 768px) {
+  /* Make adjustments for smaller screens */
+  .slider {
+    width: 90%;
+    height: 200px;
+  }
+
+  .slide {
+    width: 150px;
+    height: 150px;
+  }
+
+  .caption {
+    font-size: 24px;
+  }
+
+  .spacing {
+    font-size: 16px;
+  }
+
+  #ask {
+    background-size: contain; /* Ensure the full image is visible */
+    background-position: center center; /* Focus on the center */
+  }
+}
+
+/* Media query for very small screens (e.g., phones) */
+@media (max-width: 480px) {
+  /* Adjust for very small screens like phones */
+  .slider {
+    width: 95%;
+    height: 180px;
+  }
+
+  .slide {
+    width: 120px;
+    height: 120px;
+  }
+
+  .caption {
+    font-size: 20px;
+  }
+
+  .spacing {
+    font-size: 14px;
+  }
+
+  #ask {
+    background-size: contain; /* Ensure the full image is visible */
+    background-position: center center; /* Focus on the center */
+    height: 300px; /* Adjust the height for smaller screens */
+  }
+}
+
+/* Background images for each slide */
+#img_1 {
+  background-image: url("pastry1.jfif");
+}
+
+#img_2 {
+  background-image: url("pastry2.jfif");
+}
+
+#img_3 {
+  background-image: url("pastry3.jfif");
+}
+
+#img_4 {
+  background-image: url("pastry4.jfif");
+}
+
+#img_5 {
+  background-image: url("pastry5.jfif");
+}
+
+#img_6 {
+  background-image: url("pastry6.jfif");
+}
+
+#img_7 {
+  background-image: url("pastry7.jfif");
+}
+
+#img_8 {
+  background-image: url("pastry8.jfif");
+}
+
+#img_9 {
+  background-image: url("pastry9.jfif");
+}
+
+#img_10 {
+  background-image: url("pastry10.jfif");
+}
+
+#img_11 {
+  background-image: url("pastry11.jfif");
+}
+
+#img_12 {
+  background-image: url("pastry12.jfif");
+}
