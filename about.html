@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="about.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="top_links" class="text-overlay">
+        <a class="spacing" href="index.html">Home</a>
+        <a id="rmv" class="spacing" href="#footer">Contacts</a>
+      </div>
+
+      <br><br>
+      
+<div id="center_div"><div id="about_div"></div></div>
+<h2 id="about_hdr">About Me</h2>
+    
+<div id="text_wrapper">
+<p id="text_color">Welcome to my world of culinary artistry! I’m Chef Koffs, a dedicated pastry chef with a profound passion for creating desserts that captivate the senses and celebrate life’s sweetest moments.
+
+    From the very beginning, I’ve been enchanted by the magic of pastry-making—the ability to transform humble ingredients into extraordinary experiences. This passion led me to pursue formal training at George Brown College and the Reddish Culinary School, where I immersed myself in the art and science of baking. These prestigious institutions provided the foundation for my craft, instilling in me a commitment to excellence and a desire for innovation.
+    
+    Over the years, I’ve gained extensive experience working with diverse flavors, techniques, and styles, allowing me to develop a signature approach to pastry-making. My philosophy is simple: every dessert should be a harmonious blend of taste, texture, and presentation. Whether it’s a delicate éclair, an opulent wedding cake, or a reimagined classic, my creations are thoughtfully crafted to evoke joy and leave lasting impressions.
+    
+    What sets my work apart is not just the quality of ingredients or the precision in technique but the stories I aim to tell with every dessert. I believe that food is an expression of love, art, and culture, and I take immense pride in bringing that vision to life for my clients.
+    
+    Thank you for allowing me the privilege of sharing my craft with you. It’s an honor to be a part of your celebrations, milestones, and moments of indulgence. Let’s work together to create something exceptional—something as unique and special as you are.
+    
+    With gratitude,
+    <br>
+    Chef Koffs.</p>
+</div>
+    
+
+<script>
+    // Function to check if an element is in view
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return rect.top <= window.innerHeight && rect.bottom >= 0;
+    }
+  
+    // On scroll, check if the element is in view and trigger the animation
+    window.addEventListener('scroll', function() {
+      const textElement = document.getElementById('text_color');
+      if (isInViewport(textElement)) {
+        // Add the 'visible' class to trigger animation
+        textElement.classList.add('visible');
+      } else {
+        // Remove the class if the element is out of view (optional)
+        textElement.classList.remove('visible');
+      }
+    });
+  </script>
+  
+  <footer id="footer">
+    <!-- CopyRight Icon -->
+    <img id="copy_right" src="copyright.webp" alt="CopyRight Icon">
+    
+    
+    <div class="social-icons">
+    
+      <!-- WhatsApp Icon -->
+      <a href="https://wa.me/+2349052595622" target="_blank" aria-label="WhatsApp">
+          <img src="mainw.webp" alt="WhatsApp Icon">
+      </a>
+    
+      <!-- Instagram Icon -->
+      <a href="https://instagram.com/chefkoffs" target="_blank" aria-label="Instagram">
+          <img src="instagram.webp" alt="Instagram Icon">
+      </a>
+    
+      <!-- Snapchat Icon -->
+      <a href="https://www.snapchat.com/add/kofoworola1" target="_blank" aria-label="Snapchat">
+          <img src="mains.webp" alt="Snapchat Icon">
+      </a>
+    
+    </div>
+    <a href="#about_div">
+      <img id="back_to_top" src="back to top.webp" alt="Back To Top">
+    </a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,192 @@
+ body{
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    background: -webkit-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px, -webkit-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px, -webkit-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px, -webkit-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px, -webkit-linear-gradient(0deg, #1b1b1b 10px, transparent 10px), -webkit-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background: -moz-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px, -moz-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px, -moz-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px, -moz-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px, -moz-linear-gradient(0deg, #1b1b1b 10px, transparent 10px), -moz-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background: -ms-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px, -ms-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px, -ms-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px, -ms-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px, -ms-linear-gradient(0deg, #1b1b1b 10px, transparent 10px), -ms-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background: -o-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px, -o-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px, -o-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px, -o-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px, -o-linear-gradient(0deg, #1b1b1b 10px, transparent 10px), -o-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background: linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(0deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-size: 20px 20px;
+    background-color: #131313;
+  }
+  
+  #top_links {
+    text-align: center;
+    justify-content: center;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    background-color: black;
+    border-radius: 5px;
+    height: 35px;
+    box-shadow: -3px 20px 34px rgb(255, 255, 255)
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-30%);
+  }
+
+  .spacing {
+    margin-right: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 900;
+    color: rgb(57, 57, 58);
+  }
+  
+  /* Remove extra space on last link */
+  #rmv {
+    margin-right: 0;
+  }
+
+
+
+  #about_div{
+    width: 38%;
+    height: 500px;
+    border-radius: 50%;
+    background-size: cover;
+    background-image: url(about.jpg);
+    animation: bounce 2s infinite;
+    box-shadow: 0px 0px 34px silver;
+  }
+
+  #center_div{
+    display: flex;
+    justify-content: center;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 768px) {
+  #about_div{
+    width: 60%; /* Adjust width for tablets */
+    height: 400px; /* Adjust height for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  #about_div{
+    width: 60%; /* Adjust width for phones */
+    height: 230px; /* Adjust height for phones */
+  }
+  #top_links {
+    box-shadow: -3px 20px 40px rgb(255, 255, 255)
+  }
+}
+
+#about_hdr{
+  font-family: "Dancing Script", cursive;
+  font-size: 50px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  color: grey;
+}
+
+/*#text_color{
+  color: grey;
+  font-size: 20px;
+}**/
+ 
+
+#text_color {
+    color: grey;
+    font-size: 20px;
+    opacity: 0;
+    transform: translateY(50px); /* Initially placed below */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Apply smooth transition */
+    text-align: center;
+  }
+  
+  /* Animation Class - This is triggered when the text is visible */
+  #text_color.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: zoomShake 1s ease forwards;  /* Apply the zoom and shake effect */
+  }
+  
+  /* Keyframes for Zoom-in and Shake effect */
+  @keyframes zoomShake {
+    0% {
+      transform: translateY(50px) scale(0.8); /* Starts from below with small scale */
+    }
+    30% {
+      transform: translateY(-10px) scale(1.05); /* Zoom in slightly */
+    }
+    50% {
+      transform: translateY(5px) scale(1);  /* Center back to original position */
+    }
+    70% {
+      transform: translateY(-5px); /* Shake effect */
+    }
+    100% {
+      transform: translateY(0); /* End with original position */
+    }
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+    justify-content: center; /* Align icons at the center */
+  
+  }
+  
+  .social-icons a img {
+    width: 40px; /* Icon size */
+    height: 40px;
+    transition: transform 0.3s;
+  }
+  
+  .social-icons a img:hover {
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+  }
+  
+  #copy_right {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    position: absolute; /* Keep it fixed on the left */
+    left: 10px; /* Distance from the left edge */
+    bottom: 10px; /* Distance from the bottom edge */
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+  
+  footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  #back_to_top{
+    width: 45px; /* Adjust as needed */
+    height: 45px; /* Adjust as needed */
+    position: absolute; /* Keep it fixed on the left */
+    right: 10px; /* Distance from the Right edge */
+    bottom: 20px; /* Distance from the bottom edge */
+    z-index: 1000; /* Ensure it's above other elements */
+    transition: transform 0.3s;
+  }
+  
+  #back_to_top{
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+    animation: bounce 2s infinite;
+  }
+  
+
