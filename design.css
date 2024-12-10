@@ -271,8 +271,8 @@
   font-style: normal;
   font-size: 150px;
   margin-bottom: 20px;
-  color: transparent; /* Makes the text fill transparent */
-            -webkit-text-stroke: 3px rgb(60, 29, 29); /* Adds an outline */
+  color: rgb(60, 29, 29); 
+            -webkit-text-stroke: 3px rgb(74, 36, 36); /* Adds an outline */
 }
 
 /* Price List Holder (Centering the list items) */
